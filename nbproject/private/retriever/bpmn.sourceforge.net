@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="SourceForge presents the Yaoqiang BPMN Editor project. Yaoqiang BPMN Editor is an open source BPMN 2.0 Modeler. Yaoqiang BPMN Editor is a graphical editor for business process diagrams , compliant with OMG specifications (BPMN 2.0)" />
+	<meta name="keywords" content="Open Source, Software, Development, Developers, Projects, Downloads, OSTG, VA Software, SF.net, SourceForge, BPMN 2.0, Java Swing, BPMN, BPM, Modeler, Java, Modeling, Workflow, Business Process Management, GNU General Public License version 3.0 (GPLv3), Yaoqiang BPMN Editor" />
+	<meta name="author" content="Shi Yaoqiang">
+	
+	<title>Yaoqiang BPMN Editor - an Open Source BPMN 2.0 Modeler</title>
+	
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="shortcut icon" href="favicon.ico" >
+	<link rel="icon" type="image/gif" href="animated_favicon.gif" >
+				
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="js/slides.min.jquery.js"></script>
+	<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'slides/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true
+			});
+		});
+	</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://bpmn.sourceforge.net/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://bpmn.sourceforge.net/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+</head>
+<body>
+	<div id="container">
+		<div id="slide">
+			<div id="slides">
+				<div class="slides_container">
+					<a href="http://bpmn.sourceforge.net/slides/slide-1.png" title="Yaoqiang BPMN Editor 3.0" target="_blank"><img src="slides/slide-1.png" width="800" height="527" alt="Slide 1"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-2.png" title="BPMN Source View" target="_blank"><img src="slides/slide-2.png" width="800" height="527" alt="Slide 2"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-3.png" title="Yaoqiang BPMN Editor 3.0" target="_blank"><img src="slides/slide-3.png" width="800" height="527" alt="Slide 3"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-4.png" title="Definitions Navigator" target="_blank"><img src="slides/slide-4.png" width="800" height="527" alt="Slide 4"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-5.png" title="New File Wizard" target="_blank"><img src="slides/slide-5.png" width="800" height="527" alt="Slide 5"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-6.png" title="Custom Artifacts Admin GUI" target="_blank"><img src="slides/slide-6.png" width="800" height="527" alt="Slide 6"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-7.png" title="View Management" target="_blank"><img src="slides/slide-7.png" width="800" height="527" alt="Slide 7"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-8.png" title="Deploy Process Definition" target="_blank"><img src="slides/slide-8.png" width="800" height="527" alt="Slide 8"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-9.png" title="Hardware Retailer" target="_blank"><img src="slides/slide-9.png" width="800" height="527" alt="Slide 9"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-10.png" title="Nobel Prize Process" target="_blank"><img src="slides/slide-10.png" width="800" height="527" alt="Slide 10"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-11.png" title="Tavel Booking" target="_blank"><img src="slides/slide-11.png" width="800" height="527" alt="Slide 11"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-12.png" title="Process Simulation" target="_blank"><img src="slides/slide-12.png" width="800" height="527" alt="Slide 12"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-13.png" title="Order Process for Pizza" target="_blank"><img src="slides/slide-13.png" width="800" height="527" alt="Slide 13"></a>
+					<a href="http://bpmn.sourceforge.net/slides/slide-14.png" title="Manage Engine Connections" target="_blank"><img src="slides/slide-14.png" width="800" height="527" alt="Slide 14"></a>
+				</div>
+				<a href="#" class="prev"><img src="slides/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+				<a href="#" class="next"><img src="slides/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+			</div>
+			<img src="slides/slides-frame.png" width="739" height="341" alt="slides Frame" id="frame">
+		</div>
+		<div id="content">
+			<h2>Yaoqiang BPMN Editor</h2>
+			<p>Yaoqiang BPMN Editor is an open source graphical editor for business process diagrams, compliant with OMG specifications (BPMN 2.0). For more information please visit <a href="http://sourceforge.net/projects/bpmn/" target="_blank">http://sourceforge.net/projects/bpmn/</a>.<br/><br/></p>
+			<h2><font color='red'>ASAF Framework</font></h2>
+			<p>ASAF is an OSGi-based Swing Application Framework. Yaoqiang BPMN Editor 4/5 is developed as set of modules in this new framework. For more information about ASAF, please visit <a href="http://sourceforge.net/projects/asaf/" target="_blank">http://sourceforge.net/projects/asaf/</a>.<br/><br/></p>
+			<h2>Licensing</h2>
+			<p>Yaoqiang BPMN Editor is published under the GNU General Public License version 3.0 (GPLv3) for inclusion in programs published under a compatible open-source license. If you want to use Yaoqiang BPMN Editor in commercial, then you should purchase a commercial license. To buy a commercial license of version 3, please contact: <a href="mailto:shi_yaoqiang@yahoo.com">shi_yaoqiang@yahoo.com</a><br/><br/></p>
+			<h2>Desktop License</h2>
+			<p>This license is intended for customers who require to use Yaoqiang BPMN Editor in commercial, but do not intend to re-distribute applications containing or employing it. The Yaoqiang BPMN Editor Desktop license may only be used on a single machine.<br/><br/></p>
+			<h2>Redistribution License</h2>
+			<p>This license is intended for customers who wish to re-distribute commercial applications containing or employing Yaoqiang BPMN Editor. The Yaoqiang BPMN Editor Redistribution license allows unlimited redistribution. By purchasing this license, you automatically accept <a href="http://bpmn.sourceforge.net/licenses/YAOQIANG SOFTWARE DISTRIBUTION AGREEMENT.doc">the license agreement</a>.<br/><br/></p>
+			<h2>Purchasing</h2>
+			<p>For buying the Desktop Edition, please pay with PayPal.<br/><br/>
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="JVZ525C23XEBG">
+				<input type="image" src="https://www.paypalobjects.com/en_US/C2/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+			<br/></p>
+			<h2>Prices</h2>
+			<table>
+			<tr><td><b>Product Name</b></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><b>Price</b></td></tr>
+			<tr><td>Yaoqiang BPMN Editor, Desktop License</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>US$ 49 Per Year</td></tr>
+			<tr><td>Yaoqiang BPMN Editor, Redistribution License</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>US$ 11,999</td></tr>
+			<tr><td>Update Subscription (Redistribution License)</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>US$ 899 Per Year</td></tr>
+			<tr><td>Custom Development Services (extensions / customizations)</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>US$ 100 ~ 200 Per Hour</td></tr>
+			</table>
+			<p><br/>For more information on purchasing this license, please contact: <a href="mailto:shi_yaoqiang@yahoo.com">shi_yaoqiang@yahoo.com</a><br/><br/></p>
+			<div id="footer"><p>&copy; 2009-2017 <a href="http://www.yaoqiang.org">Yaoqiang, Inc</a>. All rights reserved.</p></div>
+		</div>
+		<div id="download">
+			<a href="http://sourceforge.net/projects/bpmn/files/latest/download" class="download download_track">Download</a>
+			<p>Version 5.3.12<br>Updated Sep 24, 2017</p>
+		</div>
+	</div>
+</body>
+</html>

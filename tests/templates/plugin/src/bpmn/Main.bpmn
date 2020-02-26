@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://sourceforge.net/bpmn/definitions/_1546002062776" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yaoqiang="http://bpmn.sourceforge.net" exporter="Yaoqiang BPMN Editor" exporterVersion="5.3" expressionLanguage="http://www.w3.org/1999/XPath" id="_1546002062776" name="FirmarHojaRuta" targetNamespace="http://sourceforge.net/bpmn/definitions/_1546002062776" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+  <process id="PROCESS_1" isClosed="false" isExecutable="true" processType="None">
+    <extensionElements>
+      <yaoqiang:description/>
+      <yaoqiang:pageFormat height="841.8897637795276" imageableHeight="831.8897637795276" imageableWidth="588.1102362204724" imageableX="5.0" imageableY="5.0" orientation="0" width="598.1102362204724"/>
+      <yaoqiang:page background="#FFFFFF" horizontalCount="1" verticalCount="1"/>
+    </extensionElements>
+    <startEvent id="main" isInterrupting="true" name="/*{$name*/Módulo/*}*/" parallelMultiple="false">
+      <documentation id="firmas_D_1" textFormat="text/plain"><![CDATA[/*{$description*/Descripción del módulo/*}*/]]></documentation>
+      <extensionElements>
+        <yaoqiang:style fillColor="#33FF00"/>
+      </extensionElements>
+      <outgoing>_2</outgoing>
+      <outputSet/>
+    </startEvent>
+    <sequenceFlow id="_2" sourceRef="main" targetRef="_7"/>
+    <endEvent id="_7">
+      <extensionElements>
+        <yaoqiang:style fillColor="#FF6600"/>
+      </extensionElements>
+      <incoming>_2</incoming>
+      <inputSet/>
+    </endEvent>
+  </process>
+  <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-PROCESS_1" name="Diagrama BPMN del Modulo" resolution="96.0">
+    <bpmndi:BPMNPlane bpmnElement="PROCESS_1">
+      <bpmndi:BPMNShape bpmnElement="main" id="Yaoqiang-main">
+        <dc:Bounds height="32.0" width="32.0" x="233.0" y="229.25"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.96" width="46.0" x="226.0" y="269.77"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" id="Yaoqiang-_7">
+        <dc:Bounds height="32.0" width="32.0" x="428.5" y="229.25"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.96" width="6.0" x="441.5" y="269.77"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_2" id="Yaoqiang-_2">
+        <di:waypoint x="264.9996688438913" y="245.25"/>
+        <di:waypoint x="429.0003311561087" y="245.25"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.96" width="6.0" x="344.0" y="235.77"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

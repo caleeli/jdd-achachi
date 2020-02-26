@@ -1,0 +1,17 @@
+{
+    "name": "jdd\/achachi",
+    "description": "Crea m\u00f3dulos JDD",
+    "type": "plugin",
+    "autoload": {
+        "psr-4": {
+            "JDD\\Achachi\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "david",
+            "email": "davidcallizaya@gmail.com"
+        }
+    ],
+    "require": {}
+}

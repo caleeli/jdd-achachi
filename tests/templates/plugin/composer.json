@@ -1,0 +1,17 @@
+{
+    "name": /*{strtolower(json_encode("$vendor/$name"))*/"jdd/achachi"/*}*/,
+    "description": /*{json_encode($description)*/"jdd plugin"/*}*/,
+    "type": "plugin",
+    "autoload": {
+        "psr-4": {
+            /*{json_encode($namespace.'\\')*/"jdd/achachi"/*}*/: "src"
+        }
+    },
+    "authors": [
+        {
+            "name": /*{json_encode($author)*/"David Callizaya"/*}*/,
+            "email": /*{json_encode($email)*/"davidcallizaya@gmail.com"/*}*/
+        }
+    ],
+    "require": {}
+}

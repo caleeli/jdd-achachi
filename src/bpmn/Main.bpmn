@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://sourceforge.net/bpmn/definitions/_1546002062776" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yaoqiang="http://bpmn.sourceforge.net" exporter="Yaoqiang BPMN Editor" exporterVersion="5.3" expressionLanguage="http://www.w3.org/1999/XPath" id="_1546002062776" name="FirmarHojaRuta" targetNamespace="http://sourceforge.net/bpmn/definitions/_1546002062776" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+  <process id="PROCESS_1" isClosed="false" isExecutable="true" processType="None">
+    <extensionElements>
+      <yaoqiang:description/>
+      <yaoqiang:pageFormat height="841.8897637795276" imageableHeight="831.8897637795276" imageableWidth="588.1102362204724" imageableX="5.0" imageableY="5.0" orientation="0" width="598.1102362204724"/>
+      <yaoqiang:page background="#FFFFFF" horizontalCount="1" verticalCount="1"/>
+    </extensionElements>
+    <startEvent id="main" isInterrupting="true" name="Achachi" parallelMultiple="false">
+      <documentation id="firmas_D_1" textFormat="text/plain"><![CDATA[Crea módulos JDD]]></documentation>
+      <extensionElements>
+        <yaoqiang:style fillColor="#33FF00"/>
+      </extensionElements>
+      <outgoing>_4</outgoing>
+      <outputSet/>
+    </startEvent>
+    <userTask completionQuantity="1" id="_2" implementation="/jdd/achachi/propiedades" isForCompensation="false" name="Propiedades del Módulo" startQuantity="1">
+      <extensionElements>
+        <yaoqiang:style align="center" fillColor="#CCFFFF" whiteSpace="wrap"/>
+      </extensionElements>
+      <incoming>_4</incoming>
+      <outgoing>_5</outgoing>
+    </userTask>
+    <scriptTask completionQuantity="1" id="_3" isForCompensation="false" name="Construir Módulo" scriptFormat="application/x-php" startQuantity="1">
+      <extensionElements>
+        <yaoqiang:style fillColor="#FFFFCC" whiteSpace="wrap"/>
+      </extensionElements>
+      <incoming>_5</incoming>
+      <outgoing>_9</outgoing>
+      <script><![CDATA[$uid = uniqid('b', true);
+$source = base_path('templates/plugin');
+$target = storage_path('build/'.$uid);
+mkdir($target);
+JDD\Achachi\Builder::build($source, $target);
+$zip = new ZipArchive();
+$ret = $zip->open(store_path('app/public/' . $uid . '.zip'), ZipArchive::CREATE | ZipArchive::OVERWRITE);
+$paths = [$source];
+while ($path = array_shift($paths)) {
+    foreach (glob($path . '/*') as $filename) {
+        if (is_dir($filename)) {
+            $paths[] = $filename;
+        } else {
+            $zip->addFile($filename, substr($filename, strlen($source) + 1));
+        }
+    }
+}
+$zip->close();]]></script>
+    </scriptTask>
+    <sequenceFlow id="_4" sourceRef="main" targetRef="_2"/>
+    <sequenceFlow id="_5" sourceRef="_2" targetRef="_3"/>
+    <userTask completionQuantity="1" id="_8" implementation="/jdd/achachi/propiedades" isForCompensation="false" name="Descargar Módulo" startQuantity="1">
+      <extensionElements>
+        <yaoqiang:style align="center" fillColor="#CCFFCC" whiteSpace="wrap"/>
+      </extensionElements>
+      <incoming>_9</incoming>
+      <outgoing>_10</outgoing>
+    </userTask>
+    <endEvent id="_7">
+      <extensionElements>
+        <yaoqiang:style fillColor="#FF6600"/>
+      </extensionElements>
+      <incoming>_10</incoming>
+      <inputSet/>
+    </endEvent>
+    <sequenceFlow id="_9" sourceRef="_3" targetRef="_8"/>
+    <sequenceFlow id="_10" sourceRef="_8" targetRef="_7"/>
+  </process>
+  <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-PROCESS_1" name="Diagrama BPMN del Modulo" resolution="96.0">
+    <bpmndi:BPMNPlane bpmnElement="PROCESS_1">
+      <bpmndi:BPMNShape bpmnElement="main" id="Yaoqiang-main">
+        <dc:Bounds height="32.0" width="32.0" x="233.0" y="229.6470588235294"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.96" width="49.0" x="224.5" y="270.17"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" id="Yaoqiang-_2">
+        <dc:Bounds height="55.0" width="85.0" x="341.125" y="218.1470588235294"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.96" width="72.0" x="347.63" y="231.17"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" id="Yaoqiang-_3">
+        <dc:Bounds height="55.0" width="85.0" x="475.75" y="218.1470588235294"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.96" width="58.0" x="489.25" y="231.17"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" id="Yaoqiang-_8">
+        <dc:Bounds height="55.0" width="85.0" x="610.375" y="218.1470588235294"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="32.96" width="61.0" x="622.38" y="231.17"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" id="Yaoqiang-_7">
+        <dc:Bounds height="32.0" width="32.0" x="771.5" y="229.6470588235294"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.96" width="6.0" x="784.5" y="270.17"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_9" id="Yaoqiang-_9">
+        <di:waypoint x="561.0" y="245.6470588235294"/>
+        <di:waypoint x="610.0" y="245.6470588235294"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.96" width="6.0" x="582.5" y="236.17"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10" id="Yaoqiang-_10">
+        <di:waypoint x="695.0" y="245.6470588235294"/>
+        <di:waypoint x="772.0078144082805" y="245.6470588235294"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.96" width="6.0" x="730.5" y="236.17"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5" id="Yaoqiang-_5">
+        <di:waypoint x="426.0" y="245.6470588235294"/>
+        <di:waypoint x="476.0" y="245.6470588235294"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.96" width="6.0" x="448.0" y="236.17"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4" id="Yaoqiang-_4">
+        <di:waypoint x="264.9921855917195" y="245.6470588235294"/>
+        <di:waypoint x="341.0" y="245.6470588235294"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.96" width="6.0" x="300.0" y="236.17"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

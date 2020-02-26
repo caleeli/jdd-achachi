@@ -1,0 +1,80 @@
+{
+    "title": "Module",
+    "type": "object",
+    "required": [
+        "name",
+        "vendor",
+        "description",
+        "author",
+        "email",
+        "components"
+    ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Modules name. Ex. Achachi",
+            "minLength": 3,
+            "default": ""
+        },
+        "vendor": {
+            "type": "string",
+            "description": "Vendor name. Ex. JDD",
+            "minLength": 2,
+            "default": ""
+        },
+        "author": {
+            "type": "string",
+            "description": "Juan DD",
+            "minLength": 2,
+            "default": ""
+        },
+        "email": {
+            "type": "email",
+            "description": "Ex. developer@gmail.com",
+            "minLength": 2,
+            "default": ""
+        },
+        "description": {
+            "type": "string"
+        },
+        "namespace": {
+            "type": "string",
+            "description": "Package namespace",
+            "template": "{{vendor}}\\{{name}}",
+            "watch": {
+                "vendor": "vendor",
+                "name": "name"
+            }
+        },
+        "components": {
+            "type": "array",
+            "format": "table",
+            "title": "Components",
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "title": "Component",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "mainscreen",
+                            "form",
+                            "list"
+                        ],
+                        "default": "mainscreen"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            },
+            "default": [
+                {
+                    "type": "mainscreen",
+                    "name": "Main"
+                }
+            ]
+        }
+    }
+}
